@@ -1,0 +1,389 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.menu {
+  color: white;
+}
+.menu .conteiner {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0px 0px 0px 0px;
+  padding: 15px 170px;
+}
+.menu .conteiner .menu__log .log {
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.menu .conteiner .menu__links .links {
+  display: flex;
+}
+.menu .conteiner .menu__links .links .link {
+  padding: 0px 30px;
+}
+.menu .conteiner .menu__links .links .link span {
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: right;
+}
+.menu .conteiner .menu__links .links .link a {
+  text-decoration: none;
+  position: relative;
+}
+.menu .conteiner .menu__links .links .link a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px; /* Змінено товщину підкреслення */
+  bottom: -3px; /* Змінено положення підкреслення відносно тексту */
+  left: 0;
+  background-color: white; /* Колір підкреслення */
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+.menu .conteiner .menu__links .links .link a:hover::after {
+  visibility: visible;
+  transform: scaleX(1);
+}
+.menu .conteiner .menu__reg {
+  display: flex;
+  align-items: center;
+}
+.menu .conteiner .menu__reg .reg {
+  padding: 0px 13px;
+}
+.menu .conteiner .menu__reg .reg:last-child {
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 4px 10px;
+}
+.menu .conteiner .menu__reg span {
+  color: white;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: right;
+}
+
+.top {
+  aspect-ratio: 1920/800;
+  width: 100%; /* Ширина фону займатиме 100% відносно контейнера */
+  max-width: 100%; /* Не перевищувати 100% ширини контейнера */
+  height: auto; /* Висота фону буде обчислюватися автоматично відповідно до aspect-ratio */
+  background: url("../img/pexels-k.png"), linear-gradient(rgb(20, 66, 114), rgb(12, 50, 79));
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  overflow: hidden;
+}
+
+.doctor {
+  display: flex;
+  justify-content: center;
+}
+.doctor .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.doctor .container .doctor-text {
+  max-width: 450px;
+}
+.doctor .container .doctor-text h1 {
+  color: #FFF;
+  text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
+  font-family: Montserrat;
+  font-size: 38px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 97.52%; /* 46.81px */
+}
+.doctor .container .doctor-text p {
+  color: #FFF;
+  text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
+  font-family: Montserrat Alternates;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  opacity: 0.8;
+}
+.doctor .container .doctor-text .buttons {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0px 1px 0px;
+}
+.doctor .container .doctor-text .buttons .button1 {
+  width: 47%;
+  height: auto;
+  padding: 5px 15px;
+  background-color: white;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* плавна зміна кольору при наведенні */
+}
+.doctor .container .doctor-text .buttons .button1 span {
+  color: #21415B;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+.doctor .container .doctor-text .buttons .button1:hover {
+  background-color: #b2b4b6; /* колір фону при наведенні */
+}
+.doctor .container .doctor-text .buttons .button2 {
+  background-color: rgba(33, 65, 91, 0); /* Прозорий синій фон */
+  border: 2px solid white; /* Біла обводка шириною 2 пікселі */
+  padding: 10px 15px;
+  border-radius: 10px;
+  width: 47%;
+  height: auto;
+}
+.doctor .container .doctor-text .buttons .button2 span {
+  color: #FFF;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+.doctor .container .doctor-text .buttons .button2:hover {
+  opacity: 0.6;
+}
+.doctor .container .doctor-img img {
+  max-height: 600px;
+  width: auto;
+}
+
+.information .who {
+  margin: 60px 0px 0px 0px;
+  max-height: 310px;
+}
+.information .who .container {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+.information .who .container .who-text {
+  order: 2;
+  max-height: 310px;
+  max-width: 400px;
+}
+.information .who .container .who-text h1 {
+  margin: 0px 0px 12px 0px;
+  color: rgb(39, 39, 39);
+  font-family: Montserrat;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.information .who .container .who-text p {
+  color: rgb(21, 64, 97);
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 34px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.information .who .container .who-img img {
+  margin: 0px 15px 0px 0px;
+  max-height: 278px;
+  height: auto;
+}
+.information .what {
+  margin: 60px 0px 0px 0px;
+  max-height: 310px;
+}
+.information .what .container {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+.information .what .container .what-text {
+  max-height: 310px;
+  max-width: 400px;
+}
+.information .what .container .what-text p {
+  color: rgb(21, 64, 97);
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 34px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.information .what .container .what-text h1 {
+  margin: 0px 0px 12px 0px;
+  color: rgb(39, 39, 39);
+  font-family: Montserrat;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.information .what .container .what-img img {
+  margin: 0px 0px 0px 15px;
+  max-height: 278px;
+  height: auto;
+}
+.information .why {
+  margin: 90px 0px 0px 0px;
+}
+.information .why .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.information .why .container h1 {
+  font-family: Montserrat;
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 58px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: rgb(39, 39, 39);
+  margin: 0px 0px 30px 0px;
+}
+.information .why .container .qwe .list {
+  -moz-column-count: 2;
+       column-count: 2;
+  -moz-column-gap: 20px;
+       column-gap: 20px; /* Додайте відступ між стовпцями за потреби */
+  max-width: 100%; /* Додайте максимальну ширину для контролю ширини */
+}
+.information .why .container .qwe .list li {
+  position: relative;
+}
+.information .why .container .qwe .list p {
+  font-family: Montserrat;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: rgb(21, 64, 97);
+}
+.information .why .container .qwe .list .h1 {
+  font-family: Montserrat;
+  font-size: 22px;
+  font-weight: 550;
+  line-height: 58px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: rgb(39, 39, 39);
+  opacity: 0.8;
+}
+.information .why .container .qwe .list li::before {
+  content: "";
+  position: absolute;
+  left: -64px;
+  aspect-ratio: 1/1;
+  height: 60px;
+  width: auto;
+}
+.information .why .container .qwe .list .man::before {
+  background: url("../img/icons/man.png") center center no-repeat; /* Додайте фон для зображення */
+}
+.information .why .container .qwe .list .laptop::before {
+  background: url("../img/icons/laptop.png") center center no-repeat; /* Додайте фон для зображення */
+}
+.information .why .container .qwe .list .planet::before {
+  background: url("../img/icons/planet.png") center center no-repeat; /* Додайте фон для зображення */
+  height: 60px;
+  width: auto;
+}
+.information .why .container .qwe .list .lamp::before {
+  background: url("../img/icons/lamp.png") center center no-repeat; /* Додайте фон для зображення */
+}
+
+body {
+  overflow-x: hidden;
+}
