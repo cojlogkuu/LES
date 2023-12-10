@@ -164,10 +164,10 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   align-items: center;
 }
-.doctor .container .doctor-text {
+.doctor .container .doctor_text {
   max-width: 450px;
 }
-.doctor .container .doctor-text h1 {
+.doctor .container .doctor_text h1 {
   color: #FFF;
   text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
   font-family: Montserrat;
@@ -176,7 +176,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   line-height: 97.52%; /* 46.81px */
 }
-.doctor .container .doctor-text p {
+.doctor .container .doctor_text p {
   color: #FFF;
   text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
   font-family: Montserrat Alternates;
@@ -186,12 +186,12 @@ h1, h2, h3, h4, h5, h6 {
   line-height: normal;
   opacity: 0.8;
 }
-.doctor .container .doctor-text .buttons {
+.doctor .container .doctor_text .buttons {
   display: flex;
   justify-content: space-between;
   margin: 20px 0px 1px 0px;
 }
-.doctor .container .doctor-text .buttons .button1 {
+.doctor .container .doctor_text .buttons .button1 {
   width: 47%;
   height: auto;
   padding: 5px 15px;
@@ -202,7 +202,7 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
   transition: background-color 0.3s ease; /* плавна зміна кольору при наведенні */
 }
-.doctor .container .doctor-text .buttons .button1 span {
+.doctor .container .doctor_text .buttons .button1 span {
   color: #21415B;
   text-align: center;
   font-family: Montserrat;
@@ -211,10 +211,10 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 800;
   line-height: normal;
 }
-.doctor .container .doctor-text .buttons .button1:hover {
+.doctor .container .doctor_text .buttons .button1:hover {
   background-color: #b2b4b6; /* колір фону при наведенні */
 }
-.doctor .container .doctor-text .buttons .button2 {
+.doctor .container .doctor_text .buttons .button2 {
   background-color: rgba(33, 65, 91, 0); /* Прозорий синій фон */
   border: 2px solid white; /* Біла обводка шириною 2 пікселі */
   padding: 10px 15px;
@@ -222,7 +222,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 47%;
   height: auto;
 }
-.doctor .container .doctor-text .buttons .button2 span {
+.doctor .container .doctor_text .buttons .button2 span {
   color: #FFF;
   text-align: center;
   font-family: Montserrat;
@@ -231,10 +231,10 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 800;
   line-height: normal;
 }
-.doctor .container .doctor-text .buttons .button2:hover {
+.doctor .container .doctor_text .buttons .button2:hover {
   opacity: 0.6;
 }
-.doctor .container .doctor-img img {
+.doctor .container .doctor_img img {
   max-height: 600px;
   width: auto;
 }
@@ -248,12 +248,12 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   align-items: end;
 }
-.information .who .container .who-text {
+.information .who .container .who_text {
   order: 2;
   max-height: 310px;
   max-width: 400px;
 }
-.information .who .container .who-text h1 {
+.information .who .container .who_text h1 {
   margin: 0px 0px 12px 0px;
   color: rgb(39, 39, 39);
   font-family: Montserrat;
@@ -263,7 +263,7 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0em;
   text-align: left;
 }
-.information .who .container .who-text p {
+.information .who .container .who_text p {
   color: rgb(21, 64, 97);
   font-family: Montserrat;
   font-size: 20px;
@@ -272,7 +272,7 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0em;
   text-align: left;
 }
-.information .who .container .who-img img {
+.information .who .container .who_img img {
   margin: 0px 15px 0px 0px;
   max-height: 278px;
   height: auto;
@@ -286,11 +286,11 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   align-items: end;
 }
-.information .what .container .what-text {
+.information .what .container .what_text {
   max-height: 310px;
   max-width: 400px;
 }
-.information .what .container .what-text p {
+.information .what .container .what_text p {
   color: rgb(21, 64, 97);
   font-family: Montserrat;
   font-size: 20px;
@@ -299,7 +299,7 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0em;
   text-align: left;
 }
-.information .what .container .what-text h1 {
+.information .what .container .what_text h1 {
   margin: 0px 0px 12px 0px;
   color: rgb(39, 39, 39);
   font-family: Montserrat;
@@ -309,7 +309,7 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0em;
   text-align: left;
 }
-.information .what .container .what-img img {
+.information .what .container .what_img img {
   margin: 0px 0px 0px 15px;
   max-height: 278px;
   height: auto;
