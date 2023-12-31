@@ -1,0 +1,218 @@
+@import "nullscss.scss";
+
+$br: 17px;
+
+$input_radius: 7px;
+
+%inlabel{
+    font-family: Montserrat;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+%ulabel{
+    top: 0;
+    left: 10px;
+    margin-top: -8px;
+    background-color: white;
+    padding: 0px 3px;
+}
+
+%uinput{
+    border: 1px solid rgba(85, 85, 85, 0.7);
+    border-radius: $input_radius;
+    padding: 15px 10px;
+    width: 100%;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    aspect-ratio: 1170 / 770;
+    width: 95%;
+    max-width: 900px;
+    min-width: 350px;
+    max-height: 100%;
+    min-height: 550px;
+
+    display: flex;
+    box-shadow: 0px 0px 70px 0px rgba(0, 0, 0, 0.3);
+    border-radius: $br;
+
+    .img{
+        background: url(../img/pexels-kampus-production-6111587\ 1.png), linear-gradient(180deg, #2C74B3 0%, #0A2647 100%);
+        // height: 100%;
+        width: 35%;
+        border-top-left-radius: $br;
+        border-bottom-left-radius: $br;
+        background-size: cover; /* Масштабування фонового зображення, щоб покрити весь блок */
+        // background-position: center; /* Центрування фонового зображення */
+
+        .text {
+            margin: 20px 0px 0px 35px;
+
+            a{
+                color: white;
+                font-family: Montserrat;
+                font-size: 24px;
+                font-weight: 800;
+                line-height: 29px;
+                letter-spacing: 0em;
+                text-align: left;
+            }
+        }
+    }
+
+    .enter{
+        width: 67%;
+        height: 100%;
+        border-radius: $br;
+        padding: 9% 50px;
+        
+        display: flex;
+        flex-direction: column;
+        // justify-content: space-between;
+
+        .acc{
+            font-family: Montserrat;
+            font-size: 20px;
+            font-weight: 800;
+            line-height: 29px;
+            letter-spacing: 0em;
+            text-align: left;
+            // margin: 0px 0px 60px 0px;
+            margin-bottom: 60px;
+        }
+
+        form{
+            height: 100%;
+        }
+
+        .form_{
+            @extend %inlabel;
+            height: 100%;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            
+            .email, .password{
+                @extend %inlabel;
+                position: relative;
+                label{
+                    position: absolute;
+                    @extend %ulabel;
+                }
+                input{
+                    @extend %uinput;
+                }
+            }
+
+            .forgot{
+                display: flex;
+                align-items: center;
+                padding: 0px 0px 0px 10px;
+                
+                a{
+                    text-decoration: underline;
+                    color: rgba(45, 142, 227, 1);
+                }
+            }
+
+            .submit_button{
+                button{
+                    width: 100%;
+                    background: rgba(44, 116, 179, 1);
+                    height: 47.6px;
+                    border-radius: $input_radius;
+
+                    &:hover{
+                        opacity: 0.8;
+                        transition: opacity 0.5s ease;
+                    }
+                }
+
+                span{
+                    font-family: Montserrat;
+                    font-size: 20px;
+                    font-weight: 800;
+                    line-height: 24px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                    color: white;
+                }
+            }
+
+            .new_acc{
+                // display: flex;
+                // justify-content: center;
+                // align-items: center;
+                width: 100%;
+                height: 47.6px;
+                border: 1px solid rgba(44, 116, 179, 1);
+                border-radius: $input_radius;
+
+                a{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 100%;
+
+                    span{
+                        font-family: Montserrat;
+                        font-size: 20px;
+                        font-weight: 400;
+                        line-height: 24px;
+                        letter-spacing: 0em;
+                        text-align: center;
+                        color: rgba(44, 116, 179, 1);
+                    }
+                }
+
+                &:hover{
+                    background-color: rgb(233, 233, 233);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .img{
+        display: none;
+    }
+    .container{
+        // aspect-ratio:inherit;
+        background-color: white;
+        justify-content: center;
+        width: 100%;
+        height: 80%;
+        .enter{
+            width: 100%;
+            // padding: 0px 0px 0px 0px;
+        }
+    }
+    body{
+        background: url(../img/pexels-kampus-production-6111587\ 1.png), linear-gradient(180deg, #2C74B3 0%, #0A2647 100%);
+    }
+}
+
+@media (max-height: 600px) {
+    body{
+        align-items: start;
+    }
+}
+
+@media (max-width: 350px) {
+    body{
+        justify-content: start;
+    }
+}

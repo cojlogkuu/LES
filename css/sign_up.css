@@ -1,0 +1,240 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.container .create .form_ .email, .container .create .form_ .password, .container .create .form_ {
+  font-family: Montserrat;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.container .create .form_ .email label, .container .create .form_ .password label, .container .create .form_ .name .uname .l_username, .container .create .form_ .name .uname .l_usersurname, .container .create .form_ .name .usurname .l_username, .container .create .form_ .name .usurname .l_usersurname {
+  top: 0;
+  left: 10px;
+  margin-top: -8px;
+  background-color: white;
+  padding: 0px 3px;
+}
+
+.container .create .form_ .email input, .container .create .form_ .password input, .container .create .form_ .name .uname .in_username, .container .create .form_ .name .uname .in_usersurname, .container .create .form_ .name .usurname .in_username, .container .create .form_ .name .usurname .in_usersurname {
+  border: 1px solid rgba(85, 85, 85, 0.7);
+  border-radius: 7px;
+  padding: 15px 10px;
+  width: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  aspect-ratio: 1170/770;
+  width: 95%;
+  max-width: 900px;
+  min-width: 350px;
+  max-height: 100%;
+  min-height: 550px;
+  display: flex;
+  box-shadow: 0px 0px 70px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 17px;
+}
+.container .img {
+  background: url(../img/pexels-kampus-production-6111587\ 1.png), linear-gradient(180deg, #2C74B3 0%, #0A2647 100%);
+  width: 35%;
+  border-top-left-radius: 17px;
+  border-bottom-left-radius: 17px;
+  background-size: cover; /* Масштабування фонового зображення, щоб покрити весь блок */
+}
+.container .img .text {
+  margin: 20px 0px 0px 35px;
+}
+.container .img .text a {
+  color: white;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.container .create {
+  width: 67%;
+  height: 100%;
+  border-radius: 17px;
+  padding: 30px 50px;
+  display: flex;
+  flex-direction: column;
+}
+.container .create .acc {
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-bottom: 60px;
+}
+.container .create form {
+  height: 100%;
+}
+.container .create .form_ {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container .create .form_ .name {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.container .create .form_ .name .uname, .container .create .form_ .name .usurname {
+  position: relative;
+  width: 45%;
+}
+.container .create .form_ .name .uname .l_username, .container .create .form_ .name .uname .l_usersurname, .container .create .form_ .name .usurname .l_username, .container .create .form_ .name .usurname .l_usersurname {
+  position: absolute;
+}
+.container .create .form_ .email, .container .create .form_ .password {
+  position: relative;
+}
+.container .create .form_ .email label, .container .create .form_ .password label {
+  position: absolute;
+}
+.container .create .form_ .policy {
+  display: flex;
+  align-items: center;
+}
+.container .create .form_ .policy input {
+  transform: scale(1.5);
+}
+.container .create .form_ .policy label {
+  padding: 0px 0px 0px 10px;
+}
+.container .create .form_ .policy label a {
+  text-decoration: underline;
+  color: rgb(45, 142, 227);
+}
+.container .create .form_ .submit_button button {
+  width: 100%;
+  background: rgb(44, 116, 179);
+  height: 47.6px;
+  border-radius: 7px;
+}
+.container .create .form_ .submit_button button:hover {
+  opacity: 0.8;
+  transition: opacity 0.5s ease;
+}
+.container .create .form_ .submit_button span {
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: white;
+}
+.container .create .form_ .enter a {
+  color: rgb(45, 142, 227);
+}
+
+@media (max-width: 700px) {
+  .img {
+    display: none;
+  }
+  .container {
+    background-color: white;
+    justify-content: center;
+    width: 100%;
+    height: 80%;
+  }
+  .container .create {
+    width: 100%;
+  }
+  body {
+    background: url(../img/pexels-kampus-production-6111587\ 1.png), linear-gradient(180deg, #2C74B3 0%, #0A2647 100%);
+  }
+}
+@media (max-height: 600px) {
+  body {
+    align-items: start;
+  }
+}
+@media (max-width: 350px) {
+  body {
+    justify-content: start;
+  }
+}

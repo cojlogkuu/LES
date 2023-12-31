@@ -8,7 +8,7 @@ a::after {
     position: absolute;
     width: 100%;
     height: 1px; /* Змінено товщину підкреслення */
-      bottom: -3px; /* Змінено положення підкреслення відносно тексту */
+    bottom: -3px; /* Змінено положення підкреслення відносно тексту */
     left: 0;
     background-color: white; /* Колір підкреслення */
     visibility: hidden;
