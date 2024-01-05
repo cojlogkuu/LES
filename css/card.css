@@ -1,0 +1,338 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+body { /*Цей блок просто для зручності, його потім треба буде видалити*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7c9c9;
+}
+
+.card {
+  height: 90%; /*Це теж для зручності, розміри картки треба буде потім вписати*/
+  background-color: white;
+  aspect-ratio: 0.8333333333;
+  border-radius: calc(10px * var(--card-height) / 324);
+  padding: calc(10px * var(--card-height) / 324) 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.card:hover .doctor_hover .container .name span, .card .doctor .name, .card .header .container .spec-cont .speciality span {
+  color: #0A2647;
+  text-align: right;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.card:hover .footer_hover .container span, .card:hover .doctor_hover .about, .card:hover .doctor_hover .container .experience span, .card .footer span, .card .doctor .experience, .card .header .container .city span, .card .header .container .spec-cont .rating {
+  color: #949494;
+  text-align: right;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.card .header {
+  width: 90.3703703704%;
+  height: 17.4342105263%;
+  display: flex;
+  flex-direction: column;
+}
+.card .header .container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.card .header .container .spec-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.card .header .container .spec-cont .speciality {
+  display: flex;
+}
+.card .header .container .spec-cont .speciality span {
+  font-size: calc(20px * var(--card-height) / 324);
+}
+.card .header .container .spec-cont .rating {
+  display: inline-block;
+  font-size: calc(14px * var(--card-height) / 324);
+}
+.card .header .container .spec-cont .rating span {
+  font-size: calc(8px * var(--card-height) / 324);
+}
+.card .header .container .spec-cont .rating::before {
+  content: "★★★★★";
+  letter-spacing: 1px;
+  background: linear-gradient(90deg, gold calc(var(--rating) - 1%), #ccc calc(var(--rating) - 1%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.card .header .container .spec-cont .rating[data-rating="0.5"]::before {
+  --rating: 10%;
+}
+.card .header .container .spec-cont .rating[data-rating="1"]::before {
+  --rating: 20%;
+}
+.card .header .container .spec-cont .rating[data-rating="1.5"]::before {
+  --rating: 30%;
+}
+.card .header .container .spec-cont .rating[data-rating="2"]::before {
+  --rating: 40%;
+}
+.card .header .container .spec-cont .rating[data-rating="2.5"]::before {
+  --rating: 50%;
+}
+.card .header .container .spec-cont .rating[data-rating="3"]::before {
+  --rating: 60%;
+}
+.card .header .container .spec-cont .rating[data-rating="3.5"]::before {
+  --rating: 70%;
+}
+.card .header .container .spec-cont .rating[data-rating="4"]::before {
+  --rating: 80%;
+}
+.card .header .container .spec-cont .rating[data-rating="4.5"]::before {
+  --rating: 90%;
+}
+.card .header .container .spec-cont .rating[data-rating="5"]::before {
+  --rating: 100%;
+}
+.card .header .container .city {
+  position: relative;
+}
+.card .header .container .city span {
+  font-size: calc(20px * var(--card-height) / 324);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.card .header .line {
+  width: 100%;
+  height: calc(1px * var(--card-height) / 324);
+  background-color: rgb(206, 206, 206);
+}
+.card .doctor {
+  width: 90.3703703704%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card .doctor .img {
+  aspect-ratio: 1/1;
+  width: 45.0819672131%;
+  height: auto;
+  border-radius: 50%;
+  background: url(../img/riko.png);
+  background-size: cover;
+}
+.card .doctor .name {
+  font-size: calc(20px * var(--card-height) / 324);
+  margin: calc(9px * var(--card-height) / 324) 0px calc(4px * var(--card-height) / 324) 0px;
+}
+.card .doctor .experience {
+  font-size: calc(16px * var(--card-height) / 324);
+}
+.card .doctor_hover {
+  display: none;
+}
+.card .footer {
+  height: 17.4342105263%;
+  display: flex;
+  align-items: center;
+}
+.card .footer span {
+  font-size: calc(9px * var(--card-height) / 324);
+}
+.card .footer_hover {
+  display: none;
+}
+.card:hover {
+  background: #0E324C;
+}
+.card:hover .header .container .spec-cont .speciality span, .card:hover .header .container .city span {
+  color: white;
+}
+.card:hover .doctor, .card:hover .footer {
+  display: none;
+}
+.card:hover .doctor_hover {
+  width: 90.3703703704%;
+  max-height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card:hover .doctor_hover .container {
+  margin-bottom: calc(10px * var(--card-height) / 324);
+  width: 100%;
+  max-height: 25%;
+  display: flex;
+  justify-content: space-between;
+}
+.card:hover .doctor_hover .container .name {
+  max-height: 100%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+.card:hover .doctor_hover .container .name span {
+  display: block;
+  color: white;
+  font-size: calc(18px * var(--card-height) / 324);
+}
+.card:hover .doctor_hover .container .experience {
+  max-height: 100%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+.card:hover .doctor_hover .container .experience span {
+  display: block;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: calc(16px * var(--card-height) / 324);
+}
+.card:hover .doctor_hover .about {
+  max-height: 80%;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: calc(16px * var(--card-height) / 324);
+  text-align: left;
+}
+.card:hover .footer_hover {
+  width: 90.3703703704%;
+  height: 17.4342105263%;
+  display: block;
+}
+.card:hover .footer_hover .container {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+.card:hover .footer_hover .container span {
+  display: block;
+  color: #FFF;
+  font-size: calc(11px * var(--card-height) / 324);
+}
+.card:hover .footer_hover .container .message button span::before {
+  content: "";
+  background: url(../img/icons/chat.svg) no-repeat;
+}
+.card:hover .footer_hover .container .profile button span::before {
+  content: "";
+  background: url(../img/icons/CustomersMajor.svg) no-repeat;
+}
+.card:hover .footer_hover .container .message, .card:hover .footer_hover .container .profile {
+  max-height: 100%;
+}
+.card:hover .footer_hover .container .message button, .card:hover .footer_hover .container .profile button {
+  display: block;
+  background-color: #0E324C;
+  max-height: 100%;
+}
+.card:hover .footer_hover .container .message button span::before, .card:hover .footer_hover .container .profile button span::before {
+  display: inline-block;
+  width: calc(20px * var(--card-height) / 324);
+  height: calc(20px * var(--card-height) / 324);
+  background-size: 95% 95%;
+  position: relative;
+  left: -10%;
+  top: calc(5px * var(--card-height) / 324);
+}
+.card:hover .footer_hover .container .message button:hover, .card:hover .footer_hover .container .profile button:hover {
+  opacity: 0.7;
+}
+.card:hover .footer_hover .container .profile button span::before {
+  width: calc(25px * var(--card-height) / 324);
+  height: calc(25px * var(--card-height) / 324);
+  top: calc(7px * var(--card-height) / 324);
+}
+.card:hover .footer_hover .container .vertical_dash {
+  width: calc(0.5px * var(--card-height) / 324);
+  height: 85%;
+  background-color: rgb(206, 206, 206);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.card:hover .footer_hover .line {
+  width: 100%;
+  height: calc(1px * var(--card-height) / 324);
+  background-color: rgb(206, 206, 206);
+}
