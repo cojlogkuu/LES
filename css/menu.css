@@ -1,0 +1,73 @@
+@charset "UTF-8";
+.menu {
+  color: white;
+}
+.menu .conteiner {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0px 0px 0px 0px;
+  padding: 15px 170px;
+}
+.menu .conteiner .menu__log .log {
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.menu .conteiner .menu__links .links {
+  display: flex;
+}
+.menu .conteiner .menu__links .links .link {
+  padding: 0px 30px;
+}
+.menu .conteiner .menu__links .links .link span {
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: right;
+}
+.menu .conteiner .menu__links .links .link a {
+  text-decoration: none;
+  position: relative;
+}
+.menu .conteiner .menu__links .links .link a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px; /* Змінено товщину підкреслення */
+  bottom: -3px; /* Змінено положення підкреслення відносно тексту */
+  left: 0;
+  background-color: white; /* Колір підкреслення */
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+.menu .conteiner .menu__links .links .link a:hover::after {
+  visibility: visible;
+  transform: scaleX(1);
+}
+.menu .conteiner .menu__reg {
+  display: flex;
+  align-items: center;
+}
+.menu .conteiner .menu__reg .reg {
+  padding: 0px 13px;
+}
+.menu .conteiner .menu__reg .reg:last-child {
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 4px 10px;
+}
+.menu .conteiner .menu__reg span {
+  color: white;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: right;
+}

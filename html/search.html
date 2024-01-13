@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Search</title>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../css/search.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+            <div class="menu">
+                <div class="container">
+                    <div class="logotype">
+                        <a href="">MediMeet</a>
+                    </div>
+
+                    <div class="links">
+                        <a href="">Головна</a>
+                        <a href="">Пошук</a>
+                        <a href="">Контакти</a>
+                    </div>
+
+                    <div class="profile">
+                        <a href="">Леськів Назар</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="filter">
+                <div class="container">
+                    <form action="">
+                        <div class="search">
+                            <input type="text" id="search" name="search" placeholder="Введіть пошуковий запит">
+                            <input type="submit" value="Знайти">
+                        </div>
+
+                        <div class="criteria">
+                            <select name="city" id="city">
+                                <option selected disabled hidden>Виберіть місто</option>
+                                <option value=""></option>
+                                <option value="kyiv">Київ</option>
+                                <option value="lviv">Львів</option>
+                                <option value="kharkiv">Харків</option>
+                                <option value="odessa">Одесса</option>
+                                <option value="zaporizhzhia">Запоріжжя</option>
+                                <option value="kryvyi rih">Кривий Ріг</option>
+                                <option value="vinnitsa">Вінниця</option>
+                                <option value="poltava">Полтава</option>
+                                <option value="dnipro">Дніпро</option>
+                                <option value="ternopil">Тернопіль</option>
+                                <option value="zhytomyr">Житомир</option>
+                            </select>
+
+                            <select name="specialty" id="specialty">
+                                <option selected disabled hidden>Виберіть спеціалність</option>
+                                <option value=""></option>
+                                <option value="spec1">Фізичний реабілітолог</option>
+                                <option value="spec2">Ерготерапевт</option>
+                                <option value="spec3">Психологічний реабілітолог</option>
+                                <option value="spec4">Социально-педагогічний реабілітолог</option>
+                                <option value="spec5">Реабілітолог в неврології</option>
+                                <option value="spec6">Реабілітолог в педіатрії</option>
+                                <option value="spec7">Реабілітолог у спортивній медицині</option>
+                            </select>
+
+                            <select name="age" id="age">
+                                <option selected disabled hidden>Для якого віку</option>
+                                <option value=""></option>
+                                <option value="old">Похилого 65+</option>
+                                <option value="adult">Дорослого 18+</option>
+                                <option value="school">Шкільного 6-17</option>
+                                <option value="child">Дитини 1-5</option>
+                                <option value="baby">Немовлят 0-1</option>
+                            </select>
+                        </div>
+
+                        <div class="services">
+                            <div class="check1">
+                                <input type="checkbox" id="checkbox_home" name="checkbox_home">
+                                <label for="checkbox_home">Виклик додому</label>
+                            </div>
+
+                            <div class="check2">
+                                <input type="checkbox" id="checkbox_online" name="checkbox_online">
+                                <label for="checkbox_online">Послуги онлайн</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="rehab_list">
+                <p>Було знайдено <span>8</span> оголошень</p>
+                <div class="container">
+                <!-- в цьому блоці(container) мають бути карточки. divs з класом block треба буде замінити на ті картки -->
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+
+                </div>
+            </div>
+    </body>
+</html>
