@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ua">
+    <head>
+        <title>Card</title>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../css/card.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="card" id="card">
+
+            <div class="header">
+                <div class="container">
+                    <div class="spec-cont">
+                        <div class="speciality">
+                            <span>Speciality</span>
+                        </div>
+                        <div class="rating" data-rating="4">
+                            <span class="rate">4.3</span>(<span class="numbers">100</span>)
+                        </div>
+                    </div>
+                    <div class="city">
+                        <span>City</span>
+                    </div>
+                </div>
+                <div class="line"></div>
+            </div>
+
+            <div class="doctor">
+                <div class="img">
+
+                </div>
+                <div class="name">
+                    <span>Назар Леськів</span>
+                </div>
+                <div class="experience">
+                    <span>5 років</span>
+                </div>
+            </div>
+            <div class="doctor_hover">
+               <div class="container">
+                    <div class="name">
+                        <span>Назар Леськів</span>
+                    </div>
+                    <div class="experience">
+                        <span>5 років</span>
+                    </div>
+               </div>
+               <div class="about">
+                <p>Займаюся реабілітайційними послугами більше 5 ти років, маю дуже великий досвід праці як онлайн, так і виїздом до дому</p>
+               </div>
+            </div>
+
+            <div class="footer">
+                <span>Наведіть, щоб побачити більше інформації</span>
+            </div>
+            <div class="footer_hover">
+                <div class="line"></div>
+                <div class="container">
+                    <div class="message">
+                        <button><span>Message</span></button>
+                    </div>
+                    <div class="vertical_dash"></div>
+                    <div class="profile">
+                        <button><span>Profile</span></button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <script>
+            // Отримати елемент
+            var cardElement = document.getElementById('card');
+        
+            // Оновити розміри елемента
+            function updateCardSize() {
+              var cardWidth = cardElement.clientWidth;
+              var cardHeight = cardElement.clientHeight;
+        
+              // Встановити змінні кореневого стилю
+              document.documentElement.style.setProperty('--card-width', cardWidth + 'px');
+              document.documentElement.style.setProperty('--card-height', cardHeight);
+            }
+        
+            // Викликати функцію оновлення при завантаженні сторінки та при зміні розмірів вікна
+            document.addEventListener('DOMContentLoaded', updateCardSize);
+            window.addEventListener('resize', updateCardSize);
+          </script>
+    </body>
+</html>

@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Search</title>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../css/search.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+            <div class="menu">
+                <div class="container">
+                    <div class="logotype">
+                        <a href="http://192.168.0.103:5500/html/main_les.html">MediMeet</a>
+                    </div>
+
+                    <div class="links">
+                        <a href="">Головна</a>
+                        <a href="">Пошук</a>
+                        <a href="">Контакти</a>
+                    </div>
+
+                    <div class="profile">
+                        <a href="">Леськів Назар</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="filter">
+                <div class="container">
+                    <form action="">
+                        <div class="search">
+                            <input type="text" id="search" name="search" placeholder="Введіть пошуковий запит">
+                            <input type="submit" value="Знайти">
+                        </div>
+
+                        <div class="criteria">
+                            <select name="city" id="city">
+                                <option selected disabled hidden>Виберіть місто</option>
+                                <option value=""></option>
+                                <option value="kyiv">Київ</option>
+                                <option value="lviv">Львів</option>
+                                <option value="kharkiv">Харків</option>
+                                <option value="odessa">Одесса</option>
+                                <option value="zaporizhzhia">Запоріжжя</option>
+                                <option value="kryvyi rih">Кривий Ріг</option>
+                                <option value="vinnitsa">Вінниця</option>
+                                <option value="poltava">Полтава</option>
+                                <option value="dnipro">Дніпро</option>
+                                <option value="ternopil">Тернопіль</option>
+                                <option value="zhytomyr">Житомир</option>
+                            </select>
+
+                            <select name="specialty" id="specialty">
+                                <option selected disabled hidden>Виберіть спеціалність</option>
+                                <option value=""></option>
+                                <option value="spec1">Фізичний реабілітолог</option>
+                                <option value="spec2">Ерготерапевт</option>
+                                <option value="spec3">Психологічний реабілітолог</option>
+                                <option value="spec4">Социально-педагогічний реабілітолог</option>
+                                <option value="spec5">Реабілітолог в неврології</option>
+                                <option value="spec6">Реабілітолог в педіатрії</option>
+                                <option value="spec7">Реабілітолог у спортивній медицині</option>
+                            </select>
+
+                            <select name="age" id="age">
+                                <option selected disabled hidden>Для якого віку</option>
+                                <option value=""></option>
+                                <option value="old">Похилого 65+</option>
+                                <option value="adult">Дорослого 18+</option>
+                                <option value="school">Шкільного 6-17</option>
+                                <option value="child">Дитини 1-5</option>
+                                <option value="baby">Немовлят 0-1</option>
+                            </select>
+                        </div>
+
+                        <div class="services">
+                            <div class="check1">
+                                <input type="checkbox" id="checkbox_home" name="checkbox_home">
+                                <label for="checkbox_home">Виклик додому</label>
+                            </div>
+
+                            <div class="check2">
+                                <input type="checkbox" id="checkbox_online" name="checkbox_online">
+                                <label for="checkbox_online">Послуги онлайн</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="rehab_list">
+                <p>Було знайдено <span>8</span> оголошень</p>
+                <div class="container">
+                <!-- в цьому блоці(container) мають бути карточки. divs з класом block треба буде замінити на ті картки -->
+                    <div class="card" id="card">
+
+                        <div class="header">
+                            <div class="container">
+                                <div class="spec-cont">
+                                    <div class="speciality">
+                                        <span>Speciality</span>
+                                    </div>
+                                    <div class="rating" data-rating="2">
+                                        <span class="rate">2.2</span>(<span class="numbers">18</span>)
+                                    </div>
+                                </div>
+                                <div class="city">
+                                    <span>City</span>
+                                </div>
+                            </div>
+                            <div class="line"></div>
+                        </div>
+            
+                        <div class="doctor">
+                            <div class="img">
+                                <img src="../img/delete/yaryna.jpg" alt="">
+                            </div>
+                            <div class="name">
+                                <span>Левко Ярина</span>
+                            </div>
+                            <div class="experience">
+                                <span>5 років</span>
+                            </div>
+                        </div>
+                        <div class="doctor_hover">
+                            <div class="container">
+                                    <div class="name">
+                                        <span>Левко Ярина</span>
+                                    </div>
+                                    <div class="experience">
+                                        <span>5 років</span>
+                                    </div>
+                            </div>
+                            <div class="about">
+                                <p>Реабілітація при травмах опорно-рухового апарату(в т.ч. сколіоз, ходьба на пальчиках)Кінезіотейпування, дитяча ерготерапія.</p>
+                            </div>
+                        </div>
+            
+                        <div class="footer">
+                            <span>Наведіть, щоб побачити більше інформації</span>
+                        </div>
+                        <div class="footer_hover">
+                            <div class="line"></div>
+                            <div class="container">
+                                <div class="message">
+                                    <button><span>Message</span></button>
+                                </div>
+                                <div class="vertical_dash"></div>
+                                <div class="profile">
+                                    <button><span>Profile</span></button>
+                                </div>
+                            </div>
+                        </div>
+            
+                    </div>
+                    <div class="card" id="card">
+
+                        <div class="header">
+                            <div class="container">
+                                <div class="spec-cont">
+                                    <div class="speciality">
+                                        <span>Speciality</span>
+                                    </div>
+                                    <div class="rating" data-rating="3.5">
+                                        <span class="rate">3.7</span>(<span class="numbers">34</span>)
+                                    </div>
+                                </div>
+                                <div class="city">
+                                    <span>City</span>
+                                </div>
+                            </div>
+                            <div class="line"></div>
+                        </div>
+            
+                        <div class="doctor">
+                            <div class="img">
+                                <img src="../img/delete/ustym.jpg" alt="">
+                            </div>
+                            <div class="name">
+                                <span>Устим Яцишин</span>
+                            </div>
+                            <div class="experience">
+                                <span>2 роки</span>
+                            </div>
+                        </div>
+                        <div class="doctor_hover">
+                           <div class="container">
+                                <div class="name">
+                                    <span>Устим Яцишин</span>
+                                </div>
+                                <div class="experience">
+                                    <span>2 роки</span>
+                                </div>
+                           </div>
+                           <div class="about">
+                            <p>Займаюся реабілітайційними послугами більше 5 ти років, маю дуже великий досвід праці як онлайн, так і виїздом до дому</p>
+                           </div>
+                        </div>
+            
+                        <div class="footer">
+                            <span>Наведіть, щоб побачити більше інформації</span>
+                        </div>
+                        <div class="footer_hover">
+                            <div class="line"></div>
+                            <div class="container">
+                                <div class="message">
+                                    <button><span>Message</span></button>
+                                </div>
+                                <div class="vertical_dash"></div>
+                                <div class="profile">
+                                    <button><span>Profile</span></button>
+                                </div>
+                            </div>
+                        </div>
+            
+                    </div>
+                    <div class="card" id="card">
+
+                        <div class="header">
+                            <div class="container">
+                                <div class="spec-cont">
+                                    <div class="speciality">
+                                        <span>Speciality</span>
+                                    </div>
+                                    <div class="rating" data-rating="4">
+                                        <span class="rate">4.3</span>(<span class="numbers">87</span>)
+                                    </div>
+                                </div>
+                                <div class="city">
+                                    <span>City</span>
+                                </div>
+                            </div>
+                            <div class="line"></div>
+                        </div>
+            
+                        <div class="doctor">
+                            <div class="img">
+                                <img src="../img/delete/zahar.jpg" alt="">
+                            </div>
+                            <div class="name">
+                                <span>Рура Захар</span>
+                            </div>
+                            <div class="experience">
+                                <span>3 роки</span>
+                            </div>
+                        </div>
+                        <div class="doctor_hover">
+                           <div class="container">
+                                <div class="name">
+                                    <span>Рура Захар</span>
+                                </div>
+                                <div class="experience">
+                                    <span>3 роки</span>
+                                </div>
+                           </div>
+                           <div class="about">
+                            <p>Працюємо з пацієнтами після травм, та хронічними дегенаритивними змінами суглобі: артрити, артрози, коксартрози, гонартрози. </p>
+                           </div>
+                        </div>
+            
+                        <div class="footer">
+                            <span>Наведіть, щоб побачити більше інформації</span>
+                        </div>
+                        <div class="footer_hover">
+                            <div class="line"></div>
+                            <div class="container">
+                                <div class="message">
+                                    <button><span>Message</span></button>
+                                </div>
+                                <div class="vertical_dash"></div>
+                                <div class="profile">
+                                    <button><span>Profile</span></button>
+                                </div>
+                            </div>
+                        </div>
+            
+                    </div>
+                    <div class="card" id="card">
+
+                        <div class="header">
+                            <div class="container">
+                                <div class="spec-cont">
+                                    <div class="speciality">
+                                        <span>Speciality</span>
+                                    </div>
+                                    <div class="rating" data-rating="4.5">
+                                        <span class="rate">4.7</span>(<span class="numbers">13</span>)
+                                    </div>
+                                </div>
+                                <div class="city">
+                                    <span>City</span>
+                                </div>
+                            </div>
+                            <div class="line"></div>
+                        </div>
+            
+                        <div class="doctor">
+                            <div class="img">
+                                <img src="../img/delete/anastasiya.jpg" alt="">
+                            </div>
+                            <div class="name">
+                                <span>Бобик Анастасія</span>
+                            </div>
+                            <div class="experience">
+                                <span>8 років</span>
+                            </div>
+                        </div>
+                        <div class="doctor_hover">
+                           <div class="container">
+                                <div class="name">
+                                    <span>Бобик Анастасія</span>
+                                </div>
+                                <div class="experience">
+                                    <span>8 років</span>
+                                </div>
+                           </div>
+                           <div class="about">
+                            <p>В своїй роботі я дотрмуюсь принципів індивідуальності, гігієни (окремий одяг для кожної дитини), наявність санітарної книжки, комплексний підхід.</p>
+                           </div>
+                        </div>
+            
+                        <div class="footer">
+                            <span>Наведіть, щоб побачити більше інформації</span>
+                        </div>
+                        <div class="footer_hover">
+                            <div class="line"></div>
+                            <div class="container">
+                                <div class="message">
+                                    <button><span>Message</span></button>
+                                </div>
+                                <div class="vertical_dash"></div>
+                                <div class="profile">
+                                    <button><span>Profile</span></button>
+                                </div>
+                            </div>
+                        </div>
+            
+                    </div>
+                    <div class="card" id="card">
+
+                        <div class="header">
+                            <div class="container">
+                                <div class="spec-cont">
+                                    <div class="speciality">
+                                        <span>Speciality</span>
+                                    </div>
+                                    <div class="rating" data-rating="4">
+                                        <span class="rate">4.3</span>(<span class="numbers">34</span>)
+                                    </div>
+                                </div>
+                                <div class="city">
+                                    <span>City</span>
+                                </div>
+                            </div>
+                            <div class="line"></div>
+                        </div>
+            
+                        <div class="doctor">
+                            <div class="img">
+                                <img src="../img/delete/dodko.jpg" alt="">
+                            </div>
+                            <div class="name">
+                                <span>Кріль Богдан</span>
+                            </div>
+                            <div class="experience">
+                                <span>1 рік</span>
+                            </div>
+                        </div>
+                        <div class="doctor_hover">
+                           <div class="container">
+                                <div class="name">
+                                    <span>Кріль Богдан</span>
+                                </div>
+                                <div class="experience">
+                                    <span>1 років</span>
+                                </div>
+                           </div>
+                           <div class="about">
+                            <p>Про себе можу сказати, що я відповідальний, толерантний, про високу кваліфікацію сказати не можу, але постійно навчаюсь.</p>
+                           </div>
+                        </div>
+            
+                        <div class="footer">
+                            <span>Наведіть, щоб побачити більше інформації</span>
+                        </div>
+                        <div class="footer_hover">
+                            <div class="line"></div>
+                            <div class="container">
+                                <div class="message">
+                                    <button><span>Message</span></button>
+                                </div>
+                                <div class="vertical_dash"></div>
+                                <div class="profile">
+                                    <button><span>Profile</span></button>
+                                </div>
+                            </div>
+                        </div>
+            
+                    </div>
+                    <div class="card" id="card">
+
+                        <div class="header">
+                            <div class="container">
+                                <div class="spec-cont">
+                                    <div class="speciality">
+                                        <span>Speciality</span>
+                                    </div>
+                                    <div class="rating" data-rating="4">
+                                        <span class="rate">4.1</span>(<span class="numbers">21</span>)
+                                    </div>
+                                </div>
+                                <div class="city">
+                                    <span>City</span>
+                                </div>
+                            </div>
+                            <div class="line"></div>
+                        </div>
+            
+                        <div class="doctor">
+                            <div class="img">
+                                <img src="../img/delete/orest.jpg" alt="">
+                            </div>
+                            <div class="name">
+                                <span>Орест Кріль</span>
+                            </div>
+                            <div class="experience">
+                                <span>6 років</span>
+                            </div>
+                        </div>
+                        <div class="doctor_hover">
+                           <div class="container">
+                                <div class="name">
+                                    <span>Орест Кріль</span>
+                                </div>
+                                <div class="experience">
+                                    <span>6 років</span>
+                                </div>
+                           </div>
+                           <div class="about">
+                            <p>Працюю в цій сфері 7 років. Працюю з людьми та дітьми після інсульту, черепно-мозкових травм та порушень опорно-рухового апарату.</p>
+                           </div>
+                        </div>
+            
+                        <div class="footer">
+                            <span>Наведіть, щоб побачити більше інформації</span>
+                        </div>
+                        <div class="footer_hover">
+                            <div class="line"></div>
+                            <div class="container">
+                                <div class="message">
+                                    <button><span>Message</span></button>
+                                </div>
+                                <div class="vertical_dash"></div>
+                                <div class="profile">
+                                    <button><span>Profile</span></button>
+                                </div>
+                            </div>
+                        </div>
+            
+                    </div>
+                    <div class="card" id="card">
+
+                        <div class="header">
+                            <div class="container">
+                                <div class="spec-cont">
+                                    <div class="speciality">
+                                        <span>Speciality</span>
+                                    </div>
+                                    <div class="rating" data-rating="5">
+                                        <span class="rate">4.9</span>(<span class="numbers">16</span>)
+                                    </div>
+                                </div>
+                                <div class="city">
+                                    <span>City</span>
+                                </div>
+                            </div>
+                            <div class="line"></div>
+                        </div>
+            
+                        <div class="doctor">
+                            <div class="img">
+                                <img src="../img/delete/vika.jpg" alt="">
+                            </div>
+                            <div class="name">
+                                <span>Зірка Вікторія</span>
+                            </div>
+                            <div class="experience">
+                                <span>3 роки</span>
+                            </div>
+                        </div>
+                        <div class="doctor_hover">
+                           <div class="container">
+                                <div class="name">
+                                    <span>Зірка Вікторія</span>
+                                </div>
+                                <div class="experience">
+                                    <span>3 роки</span>
+                                </div>
+                           </div>
+                           <div class="about">
+                            <p>Моя робота полягає в тому,щоб лежого пацієнта перетворити в ходячого.За ці 3 роки мені вдалось поставити на ноги понад 18 людей.</p>
+                           </div>
+                        </div>
+            
+                        <div class="footer">
+                            <span>Наведіть, щоб побачити більше інформації</span>
+                        </div>
+                        <div class="footer_hover">
+                            <div class="line"></div>
+                            <div class="container">
+                                <div class="message">
+                                    <button><span>Message</span></button>
+                                </div>
+                                <div class="vertical_dash"></div>
+                                <div class="profile">
+                                    <button><span>Profile</span></button>
+                                </div>
+                            </div>
+                        </div>
+            
+                    </div>
+                    <div class="card" id="card">
+
+                        <div class="header">
+                            <div class="container">
+                                <div class="spec-cont">
+                                    <div class="speciality">
+                                        <span>Speciality</span>
+                                    </div>
+                                    <div class="rating" data-rating="3.5">
+                                        <span class="rate">3.5</span>(<span class="numbers">13</span>)
+                                    </div>
+                                </div>
+                                <div class="city">
+                                    <span>City</span>
+                                </div>
+                            </div>
+                            <div class="line"></div>
+                        </div>
+            
+                        <div class="doctor">
+                            <div class="img">
+                                <img src="../img/delete/olga.jpg" alt="">
+                            </div>
+                            <div class="name">
+                                <span>Петрунів Ольга</span>
+                            </div>
+                            <div class="experience">
+                                <span>4 роки</span>
+                            </div>
+                        </div>
+                        <div class="doctor_hover">
+                           <div class="container">
+                                <div class="name">
+                                    <span>Петрунів Ольга</span>
+                                </div>
+                                <div class="experience">
+                                    <span>4 роки</span>
+                                </div>
+                           </div>
+                           <div class="about">
+                            <p>я фізичний терапевт та ерготерапевт. Маю досвіду роботи більше 5 років в нейрореабілітаці, ортопедії та неврології.</p>
+                           </div>
+                        </div>
+            
+                        <div class="footer">
+                            <span>Наведіть, щоб побачити більше інформації</span>
+                        </div>
+                        <div class="footer_hover">
+                            <div class="line"></div>
+                            <div class="container">
+                                <div class="message">
+                                    <button><span>Message</span></button>
+                                </div>
+                                <div class="vertical_dash"></div>
+                                <div class="profile">
+                                    <button><span>Profile</span></button>
+                                </div>
+                            </div>
+                        </div>
+            
+                    </div>
+                </div>
+            </div>
+    </body>
+    <script>
+        // Отримати елемент
+        var cardElement = document.getElementById('card');
+    
+        // Оновити розміри елемента
+        function updateCardSize() {
+          var cardWidth = cardElement.clientWidth;
+          var cardHeight = cardElement.clientHeight;
+    
+          // Встановити змінні кореневого стилю
+          document.documentElement.style.setProperty('--card-width', cardWidth + 'px');
+          document.documentElement.style.setProperty('--card-height', cardHeight);
+        }
+    
+        // Викликати функцію оновлення при завантаженні сторінки та при зміні розмірів вікна
+        document.addEventListener('DOMContentLoaded', updateCardSize);
+        window.addEventListener('resize', updateCardSize);
+      </script>
+</html>

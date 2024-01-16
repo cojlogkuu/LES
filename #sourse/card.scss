@@ -1,0 +1,319 @@
+@import "nullscss.scss";
+
+
+body{ /*Цей блок просто для зручності, його потім треба буде видалити*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7c9c9;
+}
+
+
+
+.card{
+    height: 200px;/*Це теж для зручності, розміри картки треба буде потім вписати*/
+
+    %bold_text{
+        color: #0A2647;
+        text-align: right;
+        font-family: Montserrat;
+        // font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    %gray_text{
+        color: #949494;
+        text-align: right;
+        font-family: Montserrat;
+        // font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    $card_width: 270;
+    $card_height: 324;
+    $inner_width: 244;
+    $inner_height: 304;
+    $img_width: 110;
+    $header_footer_height: 53;
+    $adaptive: calc(var(--card-height) / $card_height);
+
+
+    background-color: white;
+    aspect-ratio: $card_width / $card_height;
+    border-radius: calc(10px * $adaptive);
+    padding: calc(10px * $adaptive) 0px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+
+    .header{
+        width: calc(($inner_width / $card_width) * 100%);
+        height: calc(($header_footer_height / $inner_height) * 100%);
+        // height: 22%;
+        display: flex;
+        flex-direction: column;
+        .container{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            .spec-cont{
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                .speciality{  
+                    display: flex;
+                    span{
+                        @extend %bold_text;
+                        font-size: calc(20px * $adaptive)
+                    }
+                }
+
+                .rating{
+                    @extend %gray_text;
+
+                    display: inline-block;
+                    font-size: calc(14px * $adaptive);
+
+                    span{
+                        font-size: calc(8px * $adaptive);
+                    }
+
+                    &::before {
+                        $star: calc(var(--rating) - 1%);
+                        content: '★★★★★'; 
+                        letter-spacing: 1px; 
+                        background: linear-gradient(90deg, gold $star, #ccc $star);
+                        background-clip: text;
+                        -webkit-background-clip: text;
+                        color: transparent;
+                    }
+
+                    &[data-rating="0.5"]::before { --rating: 10%; }
+                    &[data-rating="1"]::before { --rating: 20%; }
+                    &[data-rating="1.5"]::before { --rating: 30%; }
+                    &[data-rating="2"]::before { --rating: 40%; }
+                    &[data-rating="2.5"]::before { --rating: 50%; }
+                    &[data-rating="3"]::before { --rating: 60%; }
+                    &[data-rating="3.5"]::before { --rating: 70%; }
+                    &[data-rating="4"]::before { --rating: 80%; }
+                    &[data-rating="4.5"]::before { --rating: 90%; }
+                    &[data-rating="5"]::before { --rating: 100%; }
+                }
+            }
+
+            .city{
+                position: relative;
+                span{
+                    @extend %gray_text;
+                    font-size: calc(20px * $adaptive);
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                }
+            }
+        }
+
+        .line{
+            width: 100%;
+            height: calc(1px * $adaptive);
+            background-color: rgba(206, 206, 206, 1);
+        }
+    }
+
+    .doctor{
+        width: calc(($inner_width / $card_width) * 100%);
+        height: auto;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .img{
+            aspect-ratio: 1 / 1;
+            width: calc(($img_width / $inner_width) * 100%);
+            height: auto;
+            border-radius: 50%;
+            background:url(../img/riko.png);
+            background-size: cover;
+        }
+
+        .name{
+            @extend %bold_text;
+            font-size: calc(20px * $adaptive);
+            margin: calc(9px * $adaptive) 0px calc(4px * $adaptive) 0px;
+        }
+
+        .experience{
+            @extend %gray_text;
+            font-size: calc(16px * $adaptive);
+        }
+    }
+    .doctor_hover{
+        display: none;
+    }
+
+    .footer{
+        height: calc(($header_footer_height / $inner_height) * 100%);
+        display: flex;
+        align-items: center;
+
+        span{
+            @extend %gray_text;
+            font-size: calc(9px * $adaptive);
+        }
+    }
+    .footer_hover{
+        display: none;
+    }
+
+    &:hover{
+        background: #0E324C;
+        .header .container .spec-cont .speciality span, .header .container .city span{
+            color: white;
+        }
+
+        .doctor, .footer{
+            display: none;
+        }
+
+        .doctor_hover{
+            width: calc(($inner_width / $card_width) * 100%);
+            max-height: 60%;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .container{
+                margin-bottom: calc(10px * $adaptive);
+                width: 100%;
+                max-height: 25%;
+                display: flex;
+                justify-content: space-between;
+
+                .name {
+                    max-height: 100%;
+                    flex-shrink: 0;
+                    display: flex;
+                    align-items: center;
+                    span{
+                        display: block;
+                        @extend %bold_text;
+                        color: white;
+                        font-size: calc(18px * $adaptive);
+                    }
+                }
+
+                .experience {
+                    max-height: 100%;
+                    flex-shrink: 0;
+                    display: flex;
+                    align-items: center;
+                    span{
+                        display: block;
+                        @extend %gray_text;
+                        color: rgba(255, 255, 255, 0.90);
+                        font-size: calc(16px * $adaptive);
+                    }
+                }
+            }
+
+            .about{
+                max-height: 80%;
+                @extend %gray_text;
+                color: rgba(255, 255, 255, 0.90);
+                font-size: calc(16px * $adaptive);
+                text-align: left;
+            }
+        }
+        
+        .footer_hover{
+            width: calc(($inner_width / $card_width) * 100%);
+            height: calc(($header_footer_height / $inner_height) * 100%);
+
+            display: block;
+
+            .container{
+                height: 100%;
+
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                position: relative;
+
+                span{
+                    display: block;
+                    @extend %gray_text;
+                    color: #FFF;
+                    font-size: calc(11px * $adaptive);
+                }
+
+                .message button span::before{
+                    content: '';
+                    background: url(../img/icons/chat.svg) no-repeat;
+                }
+
+                .profile button span::before{
+                    content: '';
+                    background: url(../img/icons/CustomersMajor.svg) no-repeat;
+                }
+
+                .message, .profile{
+                    max-height: 100%;
+                    button{
+                        display: block;
+                        background-color: #0E324C;
+                        max-height: 100%;
+                        span{
+                            &::before{
+                                // content:
+                                display: inline-block;
+                                width: calc(20px * $adaptive);
+                                height: calc(20px * $adaptive);
+                                // background:
+                                background-size: 95% 95%;
+                                position: relative;
+                                left: -10%;
+                                top: calc(5px * $adaptive);
+                            }
+                        }
+                        
+                        &:hover{
+                            opacity: 0.7;
+                        }
+                    }
+                }
+
+                .profile button span::before{
+                    width: calc(25px * $adaptive);
+                    height: calc(25px * $adaptive);
+                    top: calc(7px * $adaptive);
+                }
+
+                .vertical_dash{
+                    width: calc(0.5px * $adaptive);
+                    height: 85%;
+                    background-color: rgba(206, 206, 206, 1);
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+
+            .line{
+                width: 100%;
+                height: calc(1px * $adaptive);
+                background-color: rgba(206, 206, 206, 1);
+            }
+        }
+    }
+}

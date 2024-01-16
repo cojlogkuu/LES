@@ -166,6 +166,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .doctor .container .doctor_text {
   max-width: 450px;
+  margin-right: 56px;
 }
 .doctor .container .doctor_text h1 {
   color: #FFF;
@@ -233,6 +234,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 .doctor .container .doctor_text .buttons .button2:hover {
   opacity: 0.6;
+}
+.doctor .container .doctor_img {
+  margin-left: 40px;
 }
 .doctor .container .doctor_img img {
   max-height: 600px;
@@ -549,4 +553,12 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
   overflow-x: hidden;
+  position: relative;
+}
+
+.wave {
+  width: 100%;
+  max-height: 100px;
+  position: absolute;
+  top: 70%;
 }

@@ -1,0 +1,216 @@
+@import "nullscss.scss";
+
+@mixin text($fz, $fw, $color){
+    color: $color;
+    font-family: Montserrat;
+    font-size: $fz;
+    font-style: normal;
+    font-weight: $fw;
+    line-height: normal;
+}
+
+.menu{
+    height: 80px;
+    width: 100%;
+    .container{
+        height: 100%;
+        width: 1000px;
+        max-width: 95%;
+        margin: 0 auto;
+
+        display: flex;
+        justify-content: space-between;
+
+        .logotype{
+            display: flex;
+            align-items: center;
+
+            a{
+                @include text(24px, 800, #0A2647);
+            }
+        }
+
+        .links{
+            flex: 0 1 30%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            a{
+                @include text(16px, 400, #5F5F5F);
+                display: inline-block;
+                margin: 0px 5px;
+            }
+            @import "a_animation.scss";
+            a::after{
+                background-color: #5F5F5F;
+            }
+        }
+
+        .profile{
+            display: flex;
+            align-items: center;
+            a{
+                @include text(16px, 500, #5F5F5F);
+                position: relative;
+
+                &::before{
+                    content: '';
+                    background: url(../img/icons/notification.svg) no-repeat;
+                    display: inline-block;
+                    width: 22px;
+                    height: 27px;
+                    background-size: 95% 95%;
+                    background-position: center;
+                    position: absolute;
+                    top: -3px;
+                    left: -27px;
+                }
+            }
+        }
+    }
+}
+
+.filter{
+    width: 100%;
+    background-color: rgba(225, 225, 225, 1);
+    fill: #E1E1E1;
+    filter: drop-shadow(0px 1px 5px rgba(0, 0, 0, 0.15));
+
+    .container{
+        height: 100%;
+        width: 1000px;
+        max-width: 95%;
+        margin: 0 auto;
+
+        form{
+            max-height: 100%;
+            max-width: 100%;
+            .search{
+                display: flex;
+                justify-content: space-between;
+
+                input[type="text"]{
+                    margin: 25px 0px;
+                    height: 55px;
+                    width: 75%;
+                    border-radius: 10px;
+                    background: rgba(255, 255, 255, 0.75);
+                    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.10);
+                    padding: 0px 10px;
+                    @include text(18px, 550, rgb(59, 59, 59));
+
+                    &::placeholder{
+                        @include text(18px, 400, rgba(95, 95, 95, 1));
+                    }
+                }
+
+                input[type="submit"]{
+                    width: 20%;
+                    height: 55px;
+                    border-radius: 10px;
+                    margin: 25px 0px;
+                    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.10);
+                    background-color: rgb(158, 153, 153, 0.9);
+                    @include text(18px, 600, rgb(59, 59, 59));
+
+                    &:hover{
+                        opacity: 0.8;
+                        transition: opacity 0.3s linear;
+                    }
+                }
+            }
+
+            .criteria{
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                width: 100%;
+
+                select {
+                    flex: 0 0 290px;
+                    padding: 5px;
+                    border-radius: 4px;
+                    margin: 5px 0px;
+
+                    
+                    @include text(12px, 600, rgb(59, 59, 59));
+
+                    option{
+                        color: black;
+                        
+                    }
+                }
+            }
+
+            .services{
+                width: 70%;
+                padding: 20px 0px;
+                margin: 0 auto;
+
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+
+                input{
+                    transform: scale(1.5);
+                    margin: 0px 5px;
+                }
+
+                label{
+                    @include text(14px, 600, rgb(59, 59, 59));
+                }
+
+                .check1, .check2{
+                    display: flex;
+                    align-items: center;
+                }
+            }
+        }        
+    }
+}
+
+.rehab_list{
+    padding: 17px 0px;
+
+    p{
+        width: 1000px;
+        max-width: 95%;
+        margin: 0 auto;
+        margin-bottom: 10px;
+        @include text(16px, 500, #5F5F5F);
+    }
+
+    .container{
+        // background-color: whitesmoke;
+        width: 1000px;
+        max-width: 95%;
+        margin: 0 auto;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:center;
+
+        // .block{ /*цей блок треба замінити на готову картку, але там треба буде додати деякі css властивості*/
+        //     aspect-ratio: 270 / 324; /*цю можна забрати коли додаш картку(вона вже прописана в самій картці)*/
+        //     background-color: blue;/*цю теж забрати*/
+
+        //     /*Тут треба буде підібрати нормальний margin і виставити розміри(розміри виставляєш по ширині, висота підстроїться автоматично)*/
+        //     height: auto; 
+        //     width: 220px;
+        //     margin: 10px 15px;
+        // }
+
+        @import "card_import.scss";
+        
+        .card{
+            height: 264px;
+            border-radius: 10px;
+            border: 1px solid #CECECE;
+            background: #FFF;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
+            margin: 10px 15px;
+        }
+
+    }
+}

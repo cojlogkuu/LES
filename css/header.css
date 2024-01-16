@@ -95,6 +95,7 @@
 }
 .doctor .container .doctor_text {
   max-width: 450px;
+  margin-right: 56px;
 }
 .doctor .container .doctor_text h1 {
   color: #FFF;
@@ -162,6 +163,9 @@
 }
 .doctor .container .doctor_text .buttons .button2:hover {
   opacity: 0.6;
+}
+.doctor .container .doctor_img {
+  margin-left: 40px;
 }
 .doctor .container .doctor_img img {
   max-height: 600px;
